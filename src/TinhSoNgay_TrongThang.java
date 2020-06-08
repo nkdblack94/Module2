@@ -7,9 +7,10 @@ public class TinhSoNgay_TrongThang {
         Scanner scanner = new Scanner(System.in);
         int month = scanner.nextInt();
 
+        String daysInMonth;
         switch (month){
             case 2:
-                System.out.println("Tháng có 28 hoặc 29 ngày"); break;
+                daysInMonth = "28 or 29"; break;
             case 1:
             case 3:
             case 5:
@@ -17,14 +18,20 @@ public class TinhSoNgay_TrongThang {
             case 8:
             case 10:
             case 12:
-                System.out.println("Tháng có 31 ngày"); break;
+                daysInMonth = "31"; break;
             case 4:
             case 6:
             case 9:
             case 11:
-                System.out.println("Tháng có 30 ngày"); break;
+                daysInMonth = "30"; break;
             default:
-                System.out.println("Số tháng nhập ko hợp lệ");
+                daysInMonth = "";
+        }
+
+        if (daysInMonth != ""){
+            System.out.println("Tháng " + month + " có " + daysInMonth + " ngày");
+        } else {
+            System.out.println("Số tháng nhập ko hợp lệ");
         }
     }
 }

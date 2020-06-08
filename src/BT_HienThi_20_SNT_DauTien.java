@@ -11,7 +11,7 @@ public class BT_HienThi_20_SNT_DauTien {
 
         while (count < number){
             snt = true;
-            for (byte i = 2; i < Math.sqrt(n); i++){
+            for (byte i = 2; i <= Math.sqrt(n); i++){
                 if (n % i == 0){
                     snt = false;
                     break;

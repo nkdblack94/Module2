@@ -35,5 +35,6 @@ public class TH_TimGiaTri_Max {
 
         System.out.println("Tìm Max");
         findMax(arr);
+
     }
 }

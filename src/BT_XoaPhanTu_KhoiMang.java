@@ -25,5 +25,8 @@ public class BT_XoaPhanTu_KhoiMang {
         int number = input.nextInt();
         deleteElement(array, number);
         inArr(array);
+        System.out.println();
+        System.out.println(array.length);
+        System.out.println(array[7]);
     }
 }

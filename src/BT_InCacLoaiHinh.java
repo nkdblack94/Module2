@@ -25,9 +25,12 @@ public class BT_InCacLoaiHinh {
 
         System.out.println("In hình tam giác cân.");
 
-        for (byte i = 0; i <= 5; i++){
-            for (byte j = 0; j < i; j++){
-                System.out.print("* ");
+        for (byte i = 1; i <= 9; i+=2){
+            for (byte j = 9; j > i; j-=2){
+                System.out.print(" ");
+            }
+            for (byte x = 1; x <= i; x++){
+                System.out.print("*");
             }
             System.out.println();
         }

@@ -16,6 +16,7 @@ public class BT_XoaPhanTu_KhoiMang {
         for (int j = index_del; j < arr.length - 1; j++){
             arr[j] = arr[j + 1];
         }
+        arr[arr.length - 1] = 0;
     }
 
     public static void main(String[] args) {

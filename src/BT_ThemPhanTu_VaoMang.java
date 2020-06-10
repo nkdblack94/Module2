@@ -9,35 +9,25 @@ public class BT_ThemPhanTu_VaoMang {
 
     public static void insert(int[] arr, int element, int location) {
         int length = arr.length - 1;
-        if (location < 1 || location >= length) {
+        if (location < 0 || location >= length) {
             System.out.println("Không chèn được vào mảng");
         } else {
-            for (int i = location; i < arr.length - 1; i++) {
-                arr[i] = element;
-                arr[i + 1] = arr[i + 1];
+            for (int i = length; i > location; i--) {
+                arr[i] = arr[i - 1];
             }
+            arr[location] = element;
         }
         inArr(arr);
     }
 
     public static void main(String[] args) {
-        int[] array = new int[10];
-        array[0] = 1;
-        array[1] = 10;
-        array[2] = 5;
-        array[3] = 4;
-        array[4] = 21;
-//        array[5] = 11;
-//        array[6] = 6;
-//        array[7] = 4;
-//        array[8] = 23;
-//        array[9] = 21;
+        int[] array = {1, 2, 3, 4, 5, 6, 7};
+
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập phần tử cần chèn vào mảng");
         int x = input.nextInt();
         System.out.println("nhập vị trí càn chèn vào mảng");
         int location = input.nextInt();
         insert(array, x, location);
-
     }
 }

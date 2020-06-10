@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class BT_XoaPhanTu_KhoiMang {
     public static void inArr (int[] arr){
-        for (int i = 0; i < arr.length - 1; i++){
+        for (int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + "\t");
         }
     }
@@ -25,8 +25,5 @@ public class BT_XoaPhanTu_KhoiMang {
         int number = input.nextInt();
         deleteElement(array, number);
         inArr(array);
-        System.out.println();
-        System.out.println(array.length);
-        System.out.println(array[7]);
     }
 }

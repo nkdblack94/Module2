@@ -1,4 +1,4 @@
-package OOP;
+package TH_OOP;
 
 import java.util.Scanner;
 

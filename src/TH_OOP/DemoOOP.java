@@ -1,6 +1,4 @@
-package OOP;
-
-import java.awt.*;
+package TH_OOP;
 
 public class DemoOOP {
     private int width;

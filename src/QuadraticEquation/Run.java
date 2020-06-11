@@ -1,4 +1,4 @@
-package BT_OOP;
+package QuadraticEquation;
 
 import java.util.Scanner;
 

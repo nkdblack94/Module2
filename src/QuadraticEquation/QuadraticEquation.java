@@ -1,4 +1,4 @@
-package BT_OOP;
+package QuadraticEquation;
 
 public class QuadraticEquation {
     private double a;

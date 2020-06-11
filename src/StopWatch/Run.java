@@ -3,33 +3,37 @@ package StopWatch;
 import java.util.Scanner;
 
 public class Run {
+    public static void sortSelection(long[] array) {
+        for (long i = 0; i < array.length - 1; i++) {
+            long minIndex = i;
+            for (long j = i + 1; j < array.length; j++) {
+                if (array[(int) j] < array[(int) minIndex]) {
+                    minIndex = j;
+                }
+            }
+            swap(array, i, minIndex);
+        }
+    }
+    public static void swap(long[] array, long a, long b) {
+        long temp = array[(int) a];
+        array[(int) a] = array[(int) b];
+        array[(int) b] = temp;
+    }
+
     public static void main(String[] args) {
 
-        StopWatch run = new StopWatch();
-        int choice = -1;
-        Scanner input = new Scanner(System.in);
-
-        while (choice != 0){
-            System.out.println("Run");
-            System.out.println("1. Start time");
-            System.out.println("2. Stop time");
-            System.out.println("3. ElapsedTime, Exit");
-            System.out.println("Enter choice");
-            choice = input.nextInt();
-
-            switch (choice){
-                case 1:
-                    System.out.println("Start time: " + run.start()); break;
-                case 2:
-                    System.out.println("Stop time: " + run.stop()); break;
-                case 3:
-                    System.out.println("Start time " + run.getStartTime());
-                    System.out.println("Stop time " + run.getEndTime());
-                    System.out.println("ElapsedTime " + run.getElapsedTime());
-                    System.exit(0); break;
-                default:
-                    System.out.println("No choice!");
-            }
+        long[] arrayNumber = new long[100000];
+        for (long i = 0; i < arrayNumber.length; i++) {
+            arrayNumber[(int) i] = (long) Math.floor(Math.random() * 100000);
         }
+
+
+        StopWatch run = new StopWatch();
+        System.out.println("Start time " + run.start());
+        sortSelection(arrayNumber);
+        System.out.println("Stop time " + run.stop());
+        System.out.println("ElapsedTime " + run.getElapsedTime());
+
+
     }
 }

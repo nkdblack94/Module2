@@ -1,16 +1,31 @@
 package Fan;
 
 public class Fan {
+    private final int SLOW = 1;
+    private final int MEDIUM = 2;
+    private final int FAST = 3;
     private int speed;
     private boolean on;
     private double radius;
     private String color;
 
-    public Fan (int speed, boolean on, double radius, String color){
-        this.speed = speed;
-        this.on = on;
-        this.radius = radius;
-        this.color = color;
+    public Fan (){
+        this.on = false;
+        this.speed = this.SLOW;
+        this.radius = 5;
+        this.color = "blue";
+    }
+
+    public int getSLOW() {
+        return SLOW;
+    }
+
+    public int getMEDIUM() {
+        return MEDIUM;
+    }
+
+    public int getFAST() {
+        return FAST;
     }
 
     public int getSpeed() {
@@ -45,27 +60,13 @@ public class Fan {
         this.color = color;
     }
 
+    @Override
     public String toString(){
-        if (this.on == true){
-            return "Speed = " + this.speed + ", Radius = " + this.radius + ", Color = " + this.color + " fan is on";
+        if (this.on){
+            return "Speed = " + this.speed + ", Radius = " + this.radius + ", Color = " + this.color + ", fan is on";
         } else {
-            return "Color = " + this.color + ", Radius = " + this.radius + " fan is off";
+            return "Color = " + this.color + ", Radius = " + this.radius + ", fan is off";
         }
-    }
-
-    public static void main(String[] args) {
-        final int SLOW = 1;
-        final int MEDIUM = 2;
-        final int FAST = 3;
-
-        Fan fan1 = new Fan(1, true, 10, "yellow");
-        System.out.println(fan1.toString());
-        Fan fan2 = new Fan(1, false, 5, "blue");
-        System.out.println(fan2.toString());
-        fan2.setOn(true);
-        fan2.setSpeed(FAST);
-        fan2.setRadius(20);
-        System.out.println(fan2.toString());
     }
 }
 

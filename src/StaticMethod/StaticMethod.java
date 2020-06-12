@@ -1,4 +1,4 @@
-package AccessModifier;
+package StaticMethod;
 
 public class StaticMethod {
     public static class Student {
